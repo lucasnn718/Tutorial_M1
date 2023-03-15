@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var game: PackedScene = preload("res://Game.tscn")
+
 func _ready():
 	$ControlsScreen.hide()
 	
@@ -9,7 +11,7 @@ func _process(delta):
 		$ParallaxBackground/ParallaxLayer.position.y = -752
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://Game.tscn")
+	get_tree().change_scene_to(game)
 
 
 func _on_ControlsButton_pressed():

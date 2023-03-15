@@ -119,6 +119,7 @@ func _on_TryAgainButton_pressed():
 
 func _on_MenuButton_pressed():
 	Global.play_music()
+	Global.points = 0
 	get_tree().change_scene("res://Menu.tscn")
 	
 
